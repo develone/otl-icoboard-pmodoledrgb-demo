@@ -55,9 +55,9 @@ set_io pmod2_10 C5	#B5
 #set_io sw3_i[0] C6
 #set_io sw3_i[1] C5
 
-set_io rpi_sck H16	#H11
+set_io rpi_sck R11	#H11 	pin 23 BCM11_SCLK
 set_io rpi_cs D4
-set_io rpi_mosi P11	#A6	pin 19 BCM10 BCM9 BCM11
+set_io rpi_mosi P11	#A6	pin 19 BCM10_MOSI 
 
 
 
