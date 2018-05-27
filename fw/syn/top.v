@@ -41,7 +41,7 @@ input rpi_sck, rpi_cs, rpi_mosi;
 wire clk_50mhz;
 wire pll_locked;
 
-SB_PLL40_PAD #(
+SB_PLL40_CORE #(
   .FEEDBACK_PATH("SIMPLE"),
   .DELAY_ADJUSTMENT_MODE_FEEDBACK("FIXED"),
   .DELAY_ADJUSTMENT_MODE_RELATIVE("FIXED"),
@@ -53,7 +53,7 @@ SB_PLL40_PAD #(
   .DIVQ(3'b100),
   .FILTER_RANGE(3'b101)
 ) pll (
-  .PACKAGEPIN(clk_100mhz),
+  .REFERENCECLK(clk_100mhz),
   .PLLOUTGLOBAL(clk_50mhz),
   .LOCK(pll_locked),
   .BYPASS(1'b0),
